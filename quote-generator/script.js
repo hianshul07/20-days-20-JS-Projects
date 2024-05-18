@@ -18,7 +18,7 @@ function complete() {
 }
 
 function newQuote() {
-	loading();
+	// loading();
 	const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 	quoteText.textContent = quote.text;
 
@@ -30,7 +30,7 @@ function newQuote() {
 	} else {
 		authorText.textContent = editedAuthor[0];
 	}
-	complete();
+	// complete();
 }
 
 async function getQuotes() {
@@ -53,4 +53,3 @@ newQuoteButton.addEventListener('click', newQuote);
 twitterButton.addEventListener('click', tweetQuote);
 
 getQuotes();
-// loading();
